@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WAppDelegate : UIResponder <UIApplicationDelegate>
+@class Reachability;
 
+@interface WAppDelegate : UIResponder <UIApplicationDelegate, UINavigationControllerDelegate>{
+    Reachability * hostReach;
+    UINavigationController * nav;
+}
 @property (strong, nonatomic) UIWindow *window;
 
 @end

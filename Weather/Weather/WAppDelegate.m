@@ -7,15 +7,31 @@
 //
 
 #import "WAppDelegate.h"
-
+#import "Reachability.h"
+#import "WViewController.h"
 @implementation WAppDelegate
+
+
+- (void) reachabilityChanged: (NSNotification *)note{
+    Reachability * curReach = [note object];
+    NSParameterAssert([curReach isKindOfClass: [Reachability class]]);
+    NetworkStatus status = [curReach currentReachabilityStatus];
+    if (status == NotReachable) {
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle: @"" message: @"无网络链接, 请设置网络" delegate: nil cancelButtonTitle: @"OK" otherButtonTitles: nil];
+        [alert show];
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(reachabilityChanged:) name: kReachabilityChangedNotification object: nil];
+    hostReach = [Reachability reachabilityWithHostName: @"www.sina.com.cn"];
+    [hostReach startNotifier];
+    
     return YES;
 }
-							
+
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

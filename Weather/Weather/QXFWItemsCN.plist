@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>duanqiyubao</key>
+	<string>短期预报</string>
+	<key>zhongqiyubao</key>
+	<string>中期预报</string>
+	<key>qihouyuce</key>
+	<string>气候预测</string>
+	<key>qihoupingjia</key>
+	<string>气候评价</string>
+	<key>shenghuoqixiang</key>
+	<string>生活气象</string>
+	<key>nongyeqixiang</key>
+	<string>农业气象</string>
+	<key>shenglinhuoxian</key>
+	<string>森林火险</string>
+	<key>dizhizaihai</key>
+	<string>地质灾害</string>
+	<key>jiaotongqixiang</key>
+	<string>交通气象</string>
+	<key>tianqishikuang</key>
+	<string>天气实况</string>
+	<key>weixingyuntu</key>
+	<string>卫星云图</string>
+	<key>tianqileida</key>
+	<string>天气雷达</string>
+</dict>
+</plist>
