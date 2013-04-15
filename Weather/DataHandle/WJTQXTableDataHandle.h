@@ -16,5 +16,5 @@
 
 -(id) initWithUIDelegate: (id<WNetworkUtilDelegate>) theDelegate
                firstNode: (NSString *) theFirstNode
-              secondNode: (NSString *) theSecondNode;
+              secondNode: (NSString *) theSecondNode;///
 @end
